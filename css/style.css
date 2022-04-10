@@ -21,7 +21,7 @@ h3{
     width: 100%;
 }
 .container,.row{
-    max-width: 1080px;
+    max-width: 1200px;
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
@@ -49,15 +49,26 @@ h3{
     margin: 0 15px;
 }
 /* weekly feature product */
-.row{
+.slide-container{
+    width: 100%;
     display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
 }
-.row .box{
-    width: 25%;
-    margin-right: 15px;
+section .box{
+    flex: 0 0 25%;
+	cursor: pointer;
+    transition: all .3s;
+    padding-right: 15px;
 }
-.row .box:last-child{
-    margin-right: 0;
+section .box:nth-child(4){
+    padding-right: 0;
+}
+section .box:last-child{
+    padding-right: 0;
 }
 .product-img-box{
     height: 296px;
@@ -145,5 +156,30 @@ h3{
 .product-img-box .quick-show:hover{
     opacity: 1;
     color: #fff;
+}
+.left-arrow{
+    position: absolute;
+    top: 36%;
+    transform: translateY(-50%);
+    left: 108px;
+    z-index: 500;
+}
+.right-arrow{
+    position: absolute;
+    top: 36%;
+    transform: translateY(-50%);
+    right: 115px;
+    z-index: 500;
+}
+.right-arrow i{
+    font-size: 40px;
+    cursor: pointer;
+}
+.left-arrow i{
+    font-size: 40px;
+    cursor: pointer;
+}
+section::-webkit-scrollbar {
+    display: none;
 }
 /* weekly end product */
