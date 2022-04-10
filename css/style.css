@@ -71,6 +71,7 @@ h3{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: 0px 100%;
 }
 .product-img-box .wishlist{
     position: absolute;
@@ -89,10 +90,6 @@ h3{
     background-color: transparent;
     transition: background .3s;
 }
-.product-img-box .btn:focus{
-    border-top: none;
-    outline: none;
-}
 .product-img-box .btn i{
     color: grey;
     font-size: 15px;
@@ -101,7 +98,6 @@ h3{
     position: absolute;
     bottom: -100%;
     z-index: 5;
-    display: block;
     width: 100%;
     padding: 5px 0;
     transition: .3s;
@@ -112,6 +108,10 @@ h3{
     font-size: .85em;
     font-weight: 700;
     opacity: .95;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
 }
 .product-desc{
     padding-top: 0.7em;
@@ -128,7 +128,6 @@ h3{
    padding-top: 11px;
 }
 .product-desc .price{
-    line-height: 1;
     font-size: 19px;
 }
 .btn:hover{
@@ -142,5 +141,9 @@ h3{
 }
 .box:hover .wishlist{
    visibility: visible;
+}
+.product-img-box .quick-show:hover{
+    opacity: 1;
+    color: #fff;
 }
 /* weekly end product */
