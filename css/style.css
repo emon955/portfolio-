@@ -21,7 +21,7 @@ h3{
     width: 100%;
 }
 .container,.row{
-    max-width: 1200px;
+    max-width: 1065px;
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
@@ -157,26 +157,51 @@ section .box:last-child{
     opacity: 1;
     color: #fff;
 }
+.row:hover .left-arrow,
+.row:hover .right-arrow{
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .left-arrow{
     position: absolute;
-    top: 36%;
-    transform: translateY(-50%);
-    left: 108px;
+    top: 0;
+    left: 15px;
     z-index: 500;
+    display: none;
+    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+    width: 30px;
+    height: 100%;
+    /* box-shadow: 0 0 15px 0 rgba(235, 207, 207, 0.3); */
+    -webkit-box-shadow: 0 0 15px 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 0 15px 0 rgb(0 0 0 / 10%);
+    transition:.3s;
 }
 .right-arrow{
     position: absolute;
-    top: 36%;
-    transform: translateY(-50%);
-    right: 115px;
+    top: 0;
+    right: 15px;
     z-index: 500;
+    display: none;
+    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+    width: 30px;
+    height: 100%;
+    /* box-shadow: 0 0 15px 0 rgba(235, 207, 207, 0.3); */
+    -webkit-box-shadow: 0 0 15px 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 0 15px 0 rgb(0 0 0 / 10%);
+    transition: .3s;
+}
+.right-arrow:hover,
+.left-arrow:hover{
+    background-color: #fff;
 }
 .right-arrow i{
-    font-size: 40px;
+    font-size: 29px;
     cursor: pointer;
 }
 .left-arrow i{
-    font-size: 40px;
+    font-size: 29px;
     cursor: pointer;
 }
 section::-webkit-scrollbar {
