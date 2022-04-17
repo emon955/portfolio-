@@ -205,3 +205,39 @@ section .box:last-child{
     background-color: #fff;
 }
 /* weekly end product */
+@media screen and (max-width:800px){
+    section .box{
+        flex: 0 0 33.333333%;
+    }
+    section .box:nth-child(3){
+        padding-right: 0;
+    }
+    .row .left-arrow,
+    .row .right-arrow{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .right-arrow:hover,
+    .left-arrow:hover{
+    background-color: transparent;
+    }
+}
+@media screen and (max-width:700px){
+    section .box{
+        flex: 0 0 50%;
+    }
+    section .box:nth-child(2){
+        padding-right: 0;
+    }
+    .row .left-arrow,
+    .row .right-arrow{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .right-arrow:hover,
+    .left-arrow:hover{
+    background-color: transparent;
+    }
+}
